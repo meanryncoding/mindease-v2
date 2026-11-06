@@ -8,7 +8,7 @@ $siteName = 'MindEase';
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= h($siteName) ?>: <?= $this->fetch('title') ?></title>
-    <?= $this->Html->meta('icon') ?>
+    <link rel="icon" type="image/png" href="<?= $this->Url->image('favicon.png') ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <?= $this->Html->css('mindease') ?>
     <?= $this->fetch('meta') ?>
