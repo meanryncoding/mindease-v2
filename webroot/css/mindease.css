@@ -1,0 +1,164 @@
+:root {
+    --me-purple: #46335b;
+    --me-purple-dark: #38284a;
+    --me-lavender: #eeeaf6;
+    --me-border: #e4e1ea;
+    --me-ink: #2a2335;
+    --me-muted: #6f687a;
+}
+html, body { height: 100%; }
+body { font-family: 'Inter', system-ui, sans-serif; color: var(--me-ink); }
+
+/* Layout: two panels that fit on one screen */
+.auth-wrap { display: grid; grid-template-columns: 3fr 2fr; height: 100vh; height: 100dvh; overflow: hidden; }
+.auth-side { display: flex; flex-direction: column; justify-content: space-between; padding: 1.25rem 3rem; }
+.auth-form-side { background: #fcfbfe; }
+.auth-form-body { width: 100%; max-width: 400px; margin: 0 auto; }
+.auth-link { color: var(--me-purple); }
+
+/* Form */
+.form-label { margin-bottom: .25rem; }
+.form-control { padding: .55rem .8rem; border-color: var(--me-border); font-size: .85rem; box-shadow: 0 1px 2px rgba(70, 51, 91, .04); }
+.form-control:focus { border-color: var(--me-purple); box-shadow: 0 0 0 .2rem rgba(70, 51, 91, .12); }
+
+.role-card {
+    display: flex; flex-direction: column; align-items: center; gap: .25rem;
+    padding: .65rem .4rem; border: 1px solid var(--me-border); border-radius: .65rem;
+    font-size: .78rem; cursor: pointer; background: #fff;
+    box-shadow: 0 1px 2px rgba(70, 51, 91, .05); transition: all .15s;
+}
+.role-card:hover { border-color: #cfc5e3; }
+.role-card i { font-size: 1.05rem; color: var(--me-purple); }
+.btn-check:checked + .role-card { background: var(--me-lavender); border-color: #b9acd6; box-shadow: 0 2px 8px rgba(70, 51, 91, .12); }
+.btn-check:focus-visible + .role-card { outline: 2px solid var(--me-purple); outline-offset: 2px; }
+
+.btn-me {
+    background: linear-gradient(135deg, #55407a, var(--me-purple));
+    color: #fff; padding: .65rem; border-radius: .65rem; font-weight: 500; font-size: .9rem;
+    box-shadow: 0 4px 12px rgba(70, 51, 91, .25); transition: all .15s;
+}
+.btn-me:hover { background: linear-gradient(135deg, var(--me-purple), var(--me-purple-dark)); color: #fff; transform: translateY(-1px); }
+
+.privacy-box { display: flex; gap: .65rem; background: var(--me-lavender); border-radius: .65rem; padding: .8rem .9rem; font-size: .76rem; color: var(--me-muted); }
+.privacy-box i { color: var(--me-purple); }
+.privacy-box strong { color: var(--me-ink); display: block; margin-bottom: .1rem; }
+
+/* Purple brand panel */
+.auth-brand-side {
+    position: relative; overflow: hidden; color: #fff;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    background:
+        radial-gradient(120% 80% at 85% 0%, rgba(160, 100, 215, .45), rgba(160, 100, 215, 0) 60%),
+        linear-gradient(165deg, #4a3470 0%, #3a2a58 50%, #2c1f45 100%);
+}
+.auth-brand-side > *:not(.brand-wave):not(.brand-glow):not(.brand-dots) { position: relative; z-index: 1; }
+
+/* Decorative layers: glows, floating dots and waves (all animated) */
+.brand-glow { position: absolute; border-radius: 50%; pointer-events: none; filter: blur(40px); z-index: 0; }
+.brand-glow-top {
+    width: 380px; height: 380px; top: -150px; right: -120px;
+    background: radial-gradient(circle, rgba(205, 145, 245, .7), rgba(205, 145, 245, 0) 70%);
+    animation: glow-drift 14s ease-in-out infinite alternate;
+}
+.brand-glow-low {
+    width: 320px; height: 320px; left: -110px; bottom: 22%;
+    background: radial-gradient(circle, rgba(130, 90, 210, .5), rgba(130, 90, 210, 0) 70%);
+    animation: glow-drift 18s ease-in-out infinite alternate-reverse;
+}
+.brand-glow-lotus {
+    width: 440px; height: 440px; left: 50%; bottom: 6%; transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(190, 150, 240, .35), rgba(190, 150, 240, 0) 70%);
+    animation: glow-pulse 6s ease-in-out infinite alternate;
+}
+
+.brand-dots { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.brand-dot {
+    position: absolute; left: var(--x); bottom: -10px;
+    width: var(--size); height: var(--size); border-radius: 50%;
+    background: rgba(255, 255, 255, .55); box-shadow: 0 0 10px rgba(220, 190, 255, .8);
+    opacity: 0; animation: dot-float var(--dur) linear infinite; animation-delay: var(--delay);
+}
+
+/* Waves are twice the panel width and slide by exactly one panel width for a seamless loop */
+.brand-wave { position: absolute; left: 0; bottom: 0; width: 200%; height: 26%; pointer-events: none; z-index: 0; will-change: transform; }
+.wave-back { animation: wave-slide 28s linear infinite; }
+.wave-front { height: 20%; animation: wave-slide 18s linear infinite reverse; }
+
+@keyframes wave-slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes glow-drift {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(-60px, 50px) scale(1.15); }
+}
+@keyframes glow-pulse {
+    from { transform: translateX(-50%) scale(.95); opacity: .75; }
+    to { transform: translateX(-50%) scale(1.1); opacity: 1; }
+}
+@keyframes dot-float {
+    0% { transform: translateY(0); opacity: 0; }
+    15% { opacity: .8; }
+    85% { opacity: .5; }
+    100% { transform: translateY(-105vh); opacity: 0; }
+}
+@keyframes logo-float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-8px); }
+}
+
+/* Brand header: logo, name, partner pill */
+.brand-top { display: flex; flex-direction: column; align-items: flex-start; gap: .9rem; }
+.brand-lockup { display: flex; align-items: center; gap: .6rem; }
+.mindease-logo { height: 68px; width: auto; }
+.brand-name { font-family: 'Fraunces', Georgia, serif; font-size: 2.1rem; font-weight: 600; letter-spacing: .005em; }
+
+.uitm-pill {
+    display: inline-flex; align-items: center; gap: .85rem;
+    padding: .3rem 1.1rem; /* UiTM logo size: box padding */
+    border: 1px solid rgba(255, 255, 255, .22); border-radius: 1rem;
+    background: rgba(255, 255, 255, .08);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+.uitm-logo { height: 84px; width: auto; } /* UiTM logo size: height */
+.uitm-divider { width: 1px; align-self: stretch; background: rgba(255, 255, 255, .3); }
+.uitm-text { font-size: .72rem; line-height: 1.4; opacity: .92; }
+
+/* Hero text */
+.brand-title { font-weight: 800; font-size: clamp(2rem, 3.6vw, 3.1rem); line-height: 1.05; letter-spacing: -.02em; margin-bottom: .8rem; }
+.brand-accent {
+    background: linear-gradient(180deg, #ecdcff, #b78be8);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+}
+.brand-lead { max-width: 26rem; font-style: italic; font-weight: 400; font-size: 1rem; opacity: .9; margin-bottom: 0; }
+
+/* Hero logo */
+.hero-logo-wrap { display: flex; justify-content: center; margin-top: 1rem; }
+.mindease-hero-logo { width: clamp(180px, 18vw, 260px); height: auto; animation: logo-float 6s ease-in-out infinite alternate; }
+
+.brand-note { font-size: .68rem; opacity: .65; }
+
+/* Short screens (small laptops): compress further so no scrolling is needed */
+@media (max-height: 720px) and (min-width: 992px) {
+    .auth-side { padding: 1rem 3rem; }
+    .role-card { padding: .5rem .4rem; }
+    .privacy-box { padding: .65rem .8rem; }
+    .help-line { display: none; }
+    .brand-top { gap: .6rem; }
+    .mindease-logo { height: 54px; }
+    .brand-name { font-size: 1.8rem; }
+    .uitm-logo { height: 64px; } /* UiTM logo size: short screens */
+    .brand-title { font-size: clamp(1.7rem, 3vw, 2.4rem); }
+    .mindease-hero-logo { width: 150px; }
+}
+
+/* Phones and tablets: stack vertically and allow scrolling */
+@media (max-width: 991px) {
+    .auth-wrap { display: block; height: auto; overflow: visible; }
+    .auth-side { padding: 1.5rem; min-height: 60vh; gap: 1.5rem; }
+    .auth-form-body { margin: 1.5rem auto; }
+}
+
+/* Respect users who ask for less motion */
+@media (prefers-reduced-motion: reduce) {
+    .brand-glow, .brand-wave, .mindease-hero-logo { animation: none; }
+    .brand-dots { display: none; }
+}
