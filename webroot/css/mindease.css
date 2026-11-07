@@ -217,3 +217,36 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--me-ink); }
 .stat-number { font-size: 2rem; font-weight: 600; }
 .chip { display: inline-block; background: var(--me-lavender); color: var(--me-purple); border-radius: 2rem; padding: .15rem .6rem; font-size: .72rem; font-weight: 500; }
 .chip-up { background: #dfeadf; color: #2f5d3a; }
+
+
+/* ===== Accessibility settings ===== */
+.a11y-spacing body { line-height: 1.9; letter-spacing: .02em; word-spacing: .08em; }
+.a11y-spacing p, .a11y-spacing li { line-height: 1.9; }
+
+.a11y-readable-font body,
+.a11y-readable-font .portal-brand,
+.a11y-readable-font .brand-name,
+.a11y-readable-font .auth-brand-side { font-family: 'Atkinson Hyperlegible', 'Inter', system-ui, sans-serif !important; }
+
+.a11y-reduce-motion *,
+.a11y-reduce-motion *::before,
+.a11y-reduce-motion *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+.a11y-reduce-motion .brand-dots { display: none; }
+
+/* High contrast: black on white, strong borders, underlined links */
+.a11y-contrast {
+    --bs-body-color: #000; --bs-body-bg: #fff; --bs-secondary-color: #1f1f1f; --bs-border-color: #000;
+    --me-purple: #2b1a40; --me-ink: #000; --me-muted: #1f1f1f; --me-border: #000; --me-lavender: #fff;
+}
+.a11y-contrast body, .a11y-contrast .portal-body { background: #fff; color: #000; }
+.a11y-contrast .card-soft, .a11y-contrast .portal-sidebar, .a11y-contrast .portal-topbar,
+.a11y-contrast .card-hero, .a11y-contrast .card-calm, .a11y-contrast .support-card { background: #fff; color: #000; border: 2px solid #000; }
+.a11y-contrast .text-muted { color: #1f1f1f !important; }
+.a11y-contrast a:not(.btn):not(.nav-item-link) { color: #00228a; text-decoration: underline; }
+.a11y-contrast .btn-me { background: #000; color: #fff; box-shadow: none; }
+.a11y-contrast .nav-item-link[aria-current="page"] { background: #000; color: #fff; }
+.a11y-contrast .chip, .a11y-contrast .chip-up, .a11y-contrast .workspace-pill { background: #fff; color: #000; border: 1px solid #000; }
+.a11y-contrast .avatar { background: #000; color: #fff; }
+.a11y-contrast svg polyline { stroke: #000 !important; }
+.a11y-contrast svg circle { fill: #000 !important; }
+.a11y-contrast svg polygon { fill: rgba(0, 0, 0, .08) !important; }
