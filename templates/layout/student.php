@@ -7,7 +7,7 @@ $initials = strtoupper(substr($parts[0] ?? '', 0, 1) . substr($parts[1] ?? '', 0
 $navVars = ['name' => $name, 'initials' => $initials];
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= h($lang ?? 'en') ?>">
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,45 +23,46 @@ $navVars = ['name' => $name, 'initials' => $initials];
     <?= $this->fetch('css') ?>
 </head>
 <body class="portal-body">
-    <a class="skip-link" href="#main">Skip to main content</a>
+    <a class="skip-link" href="#main"><?= __('Skip to main content') ?></a>
 
     <div class="portal">
-        <aside class="portal-sidebar d-none d-lg-flex" aria-label="Sidebar">
+        <aside class="portal-sidebar d-none d-lg-flex" aria-label="<?= __('Sidebar') ?>">
             <?= $this->element('student_nav', $navVars) ?>
         </aside>
 
         <div class="portal-main">
             <header class="portal-topbar">
                 <div class="d-flex align-items-center gap-2">
-                    <button class="btn-ghost d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open menu">
+                    <button class="btn-ghost d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="<?= __('Open menu') ?>">
                         <i class="bi bi-list" aria-hidden="true"></i>
                     </button>
-                    <nav aria-label="Breadcrumb">
+                    <nav aria-label="<?= __('Breadcrumb') ?>">
                         <ol class="breadcrumb mb-0 small">
-                            <li class="breadcrumb-item">Student portal</li>
+                            <li class="breadcrumb-item"><?= __('Student portal') ?></li>
                             <li class="breadcrumb-item active" aria-current="page"><?= h($this->fetch('title')) ?></li>
                         </ol>
                     </nav>
                 </div>
 
                 <div class="d-flex align-items-center gap-2 gap-md-3">
-                    <span class="small text-muted d-none d-md-inline"><i class="bi bi-lock" aria-hidden="true"></i> Private &amp; confidential</span>
-                    <button type="button" class="btn-ghost" data-theme-toggle aria-pressed="false" aria-label="Dark mode">
+                    <span class="small text-muted d-none d-xl-inline"><i class="bi bi-lock" aria-hidden="true"></i> <?= __('Private and confidential') ?></span>
+                    <span class="small d-none d-sm-inline"><?= $this->element('lang_switch') ?></span>
+                    <button type="button" class="btn-ghost" data-theme-toggle aria-pressed="false" aria-label="<?= __('Dark mode') ?>">
                         <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i>
                         <i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
                     </button>
                     <button type="button" class="btn-ghost" data-bs-toggle="offcanvas" data-bs-target="#a11yPanel" aria-controls="a11yPanel">
                         <i class="bi bi-universal-access" aria-hidden="true"></i>
-                        <span class="visually-hidden">Accessibility settings</span>
+                        <span class="visually-hidden"><?= __('Accessibility settings') ?></span>
                     </button>
-                    <button type="button" class="btn-ghost" aria-label="Notifications">
+                    <button type="button" class="btn-ghost" aria-label="<?= __('Notifications') ?>">
                         <i class="bi bi-bell" aria-hidden="true"></i>
                     </button>
                     <div class="dropdown">
-                        <button class="avatar" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account menu for <?= h($name) ?>"><?= h($initials) ?></button>
+                        <button class="avatar" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="<?= h(__('Account menu for %s', $name)) ?>"><?= h($initials) ?></button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><span class="dropdown-item-text small text-muted"><?= h($email) ?></span></li>
-                            <li><a class="dropdown-item" href="/logout">Sign out</a></li>
+                            <li><a class="dropdown-item" href="<?= $this->Url->build('/logout') ?>"><?= __('Sign out') ?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -72,16 +73,16 @@ $navVars = ['name' => $name, 'initials' => $initials];
             </main>
 
             <footer class="portal-footer small text-muted">
-                <span>MindEase · Your Wellbeing Matters.</span>
-                <span><a href="#" class="text-muted">Privacy &amp; confidentiality</a> · <a href="#" class="text-muted">Help centre</a></span>
+                <span>MindEase · <?= __('Your wellbeing matters.') ?></span>
+                <span><a href="#" class="text-muted"><?= __('Privacy and confidentiality') ?></a> · <a href="#" class="text-muted"><?= __('Help centre') ?></a></span>
             </footer>
         </div>
     </div>
 
     <!-- Mobile navigation -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileNav" aria-label="Menu">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileNav" aria-label="<?= __('Menu') ?>">
         <div class="offcanvas-header">
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="<?= __('Close menu') ?>"></button>
         </div>
         <div class="offcanvas-body d-flex flex-column">
             <?= $this->element('student_nav', $navVars) ?>
@@ -91,55 +92,60 @@ $navVars = ['name' => $name, 'initials' => $initials];
     <!-- Display and accessibility settings -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="a11yPanel" aria-labelledby="a11yTitle">
         <div class="offcanvas-header">
-            <h2 class="offcanvas-title h5" id="a11yTitle">Accessibility settings</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close accessibility settings"></button>
+            <h2 class="offcanvas-title h5" id="a11yTitle"><?= __('Accessibility settings') ?></h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="<?= __('Close accessibility settings') ?>"></button>
         </div>
         <div class="offcanvas-body">
-            <p class="small text-muted">These settings are saved on this device.</p>
+            <p class="small text-muted"><?= __('These settings are saved on this device.') ?></p>
 
             <fieldset class="mb-4">
-                <legend class="h6">Theme</legend>
+                <legend class="h6"><?= __('Language') ?></legend>
+                <?= $this->element('lang_switch') ?>
+            </fieldset>
+
+            <fieldset class="mb-4">
+                <legend class="h6"><?= __('Theme') ?></legend>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="a11yTheme" id="a11yThemeSystem" value="system">
-                    <label class="form-check-label" for="a11yThemeSystem">Match my device</label>
+                    <label class="form-check-label" for="a11yThemeSystem"><?= __('Match my device') ?></label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="a11yTheme" id="a11yThemeLight" value="light">
-                    <label class="form-check-label" for="a11yThemeLight">Light</label>
+                    <label class="form-check-label" for="a11yThemeLight"><?= __('Light') ?></label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="a11yTheme" id="a11yThemeDark" value="dark">
-                    <label class="form-check-label" for="a11yThemeDark">Dark</label>
+                    <label class="form-check-label" for="a11yThemeDark"><?= __('Dark') ?></label>
                 </div>
             </fieldset>
 
             <fieldset class="mb-4">
-                <legend class="h6">Text size</legend>
+                <legend class="h6"><?= __('Text size') ?></legend>
                 <div class="d-flex align-items-center gap-2">
-                    <button type="button" class="btn btn-outline-secondary" data-a11y-size="down" aria-label="Decrease text size">A−</button>
+                    <button type="button" class="btn btn-outline-secondary" data-a11y-size="down" aria-label="<?= __('Decrease text size') ?>">A−</button>
                     <span class="flex-grow-1 text-center fw-semibold" id="a11ySizeLabel" aria-live="polite">100%</span>
-                    <button type="button" class="btn btn-outline-secondary" data-a11y-size="up" aria-label="Increase text size">A+</button>
+                    <button type="button" class="btn btn-outline-secondary" data-a11y-size="up" aria-label="<?= __('Increase text size') ?>">A+</button>
                 </div>
             </fieldset>
 
             <div class="form-check form-switch mb-3">
                 <input class="form-check-input" type="checkbox" role="switch" id="a11yContrast">
-                <label class="form-check-label" for="a11yContrast">High contrast (always light)</label>
+                <label class="form-check-label" for="a11yContrast"><?= __('High contrast (always light)') ?></label>
             </div>
             <div class="form-check form-switch mb-3">
                 <input class="form-check-input" type="checkbox" role="switch" id="a11yFont">
-                <label class="form-check-label" for="a11yFont">Easy-to-read font</label>
+                <label class="form-check-label" for="a11yFont"><?= __('Easy-to-read font') ?></label>
             </div>
             <div class="form-check form-switch mb-3">
                 <input class="form-check-input" type="checkbox" role="switch" id="a11ySpacing">
-                <label class="form-check-label" for="a11ySpacing">Wider text spacing</label>
+                <label class="form-check-label" for="a11ySpacing"><?= __('Wider text spacing') ?></label>
             </div>
             <div class="form-check form-switch mb-4">
                 <input class="form-check-input" type="checkbox" role="switch" id="a11yMotion">
-                <label class="form-check-label" for="a11yMotion">Reduce motion</label>
+                <label class="form-check-label" for="a11yMotion"><?= __('Reduce motion') ?></label>
             </div>
 
-            <button type="button" class="btn btn-outline-secondary w-100" id="a11yReset">Reset to default</button>
+            <button type="button" class="btn btn-outline-secondary w-100" id="a11yReset"><?= __('Reset to default') ?></button>
         </div>
     </div>
 

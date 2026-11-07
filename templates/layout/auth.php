@@ -1,6 +1,6 @@
 <?php /** @var \App\View\AppView $this */ ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= h($lang ?? 'en') ?>">
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -1,0 +1,300 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MindEase v2\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Sign in"
+msgstr "Log masuk"
+
+msgid "Student"
+msgstr "Pelajar"
+
+msgid "Counselor"
+msgstr "Kaunselor"
+
+msgid "Admin"
+msgstr "Pentadbir"
+
+msgid "An Institutional Partner"
+msgstr "Rakan Institusi"
+
+msgid "Student wellness portal"
+msgstr "Portal kesejahteraan pelajar"
+
+msgid "Dark mode"
+msgstr "Mod gelap"
+
+msgid "Welcome to MindEase"
+msgstr "Selamat datang ke MindEase"
+
+msgid "Choose your workspace and sign in to continue."
+msgstr "Pilih ruang kerja anda dan log masuk untuk meneruskan."
+
+msgid "Incorrect email or password."
+msgstr "E-mel atau kata laluan tidak betul."
+
+msgid "I'm signing in as a"
+msgstr "Saya log masuk sebagai"
+
+msgid "UiTM email address"
+msgstr "Alamat e-mel UiTM"
+
+msgid "Password"
+msgstr "Kata laluan"
+
+msgid "Remember this device"
+msgstr "Ingat peranti ini"
+
+msgid "Forgot password?"
+msgstr "Lupa kata laluan?"
+
+msgid "Sign in to your space"
+msgstr "Log masuk ke ruang anda"
+
+msgid "Your information stays protected"
+msgstr "Maklumat anda kekal dilindungi"
+
+msgid "Access is limited by role. Counseling notes are never visible to administrators or other students."
+msgstr "Akses dihadkan mengikut peranan. Nota kaunseling tidak pernah dapat dilihat oleh pentadbir atau pelajar lain."
+
+msgid "Need help signing in?"
+msgstr "Perlukan bantuan untuk log masuk?"
+
+msgid "Visit the help centre"
+msgstr "Layari pusat bantuan"
+
+msgid "Privacy & confidentiality"
+msgstr "Privasi & kerahsiaan"
+
+msgid "Need urgent support?"
+msgstr "Perlukan sokongan segera?"
+
+msgid "Your Wellbeing"
+msgstr "Kesejahteraan Anda"
+
+msgid "Matters."
+msgstr "Penting."
+
+msgid "A little space to check in, find your balance, and connect with someone who cares."
+msgstr "Sedikit ruang untuk menyemak diri, mencari keseimbangan dan berhubung dengan seseorang yang prihatin."
+
+msgid "A private space. A kinder starting point."
+msgstr "Ruang peribadi. Permulaan yang lebih baik."
+
+msgid "A conceptual student wellness experience. Sample records and scores are illustrative, not clinical diagnoses."
+msgstr "Pengalaman kesejahteraan pelajar secara konsep. Rekod dan skor contoh hanyalah ilustrasi, bukan diagnosis klinikal."
+
+msgid "Overview"
+msgstr "Ringkasan"
+
+msgid "Student wellbeing counselor"
+msgstr "Kaunselor kesejahteraan pelajar"
+
+msgid "{0} · 10:00–10:50 AM"
+msgstr "{0} · 10:00–10:50 pagi"
+
+msgid "Online · Private video session"
+msgstr "Dalam talian · Sesi video peribadi"
+
+msgid "A little space for you, {0}."
+msgstr "Sedikit ruang untuk anda, {0}."
+
+msgid "Let's take today one step at a time."
+msgstr "Mari kita harungi hari ini selangkah demi selangkah."
+
+msgid "Take a check-in"
+msgstr "Buat semakan diri"
+
+msgid "YOUR WELLBEING MATTERS"
+msgstr "KESEJAHTERAAN ANDA PENTING"
+
+msgid "Small steps. Meaningful change."
+msgstr "Langkah kecil. Perubahan bermakna."
+
+msgid "Pause, notice how you feel, and make room for what you need."
+msgstr "Berhenti seketika, kenali perasaan anda, dan berikan ruang untuk apa yang anda perlukan."
+
+msgid "Explore your wellbeing toolkit"
+msgstr "Terokai alat kesejahteraan anda"
+
+msgid "Your next session"
+msgstr "Sesi anda yang seterusnya"
+
+msgid "View appointment"
+msgstr "Lihat temu janji"
+
+msgid "Your wellbeing, over time"
+msgstr "Kesejahteraan anda dari semasa ke semasa"
+
+msgid "A personal reflection, not a clinical diagnosis."
+msgstr "Refleksi peribadi, bukan diagnosis klinikal."
+
+msgid "View results"
+msgstr "Lihat keputusan"
+
+msgid "{0} points since last check-in"
+msgstr "{0} mata sejak semakan terakhir"
+
+msgid "Sample data"
+msgstr "Data contoh"
+
+msgid "Higher = more positive wellbeing"
+msgstr "Lebih tinggi = kesejahteraan lebih positif"
+
+msgid "Wellbeing score over time"
+msgstr "Skor kesejahteraan dari semasa ke semasa"
+
+msgid "Line chart of sample wellbeing scores from {0} ({1}) to {2} ({3}). The same values are listed in a table for screen readers."
+msgstr "Carta garis skor kesejahteraan contoh dari {0} ({1}) hingga {2} ({3}). Nilai yang sama disenaraikan dalam jadual untuk pembaca skrin."
+
+msgid "Sample wellbeing scores"
+msgstr "Skor kesejahteraan contoh"
+
+msgid "Date"
+msgstr "Tarikh"
+
+msgid "Score"
+msgstr "Skor"
+
+msgid "Take a gentle pause"
+msgstr "Berehat sebentar"
+
+msgid "Try a two-minute breathing exercise between your classes."
+msgstr "Cuba latihan pernafasan dua minit di antara kelas anda."
+
+msgid "Start breathing exercise"
+msgstr "Mulakan latihan pernafasan"
+
+msgid "A note from {0}"
+msgstr "Nota daripada {0}"
+
+msgid "You've made space to reflect this week. Let's keep building a routine that feels manageable."
+msgstr "Anda telah meluangkan masa untuk bermuhasabah minggu ini. Mari kita teruskan membina rutin yang terurus."
+
+msgid "Read feedback"
+msgstr "Baca maklum balas"
+
+msgid "Wellness assessment"
+msgstr "Penilaian kesejahteraan"
+
+msgid "Results & progress"
+msgstr "Keputusan & perkembangan"
+
+msgid "Counselor feedback"
+msgstr "Maklum balas kaunselor"
+
+msgid "Support resources"
+msgstr "Sumber sokongan"
+
+msgid "Counseling sessions"
+msgstr "Sesi kaunseling"
+
+msgid "Student workspace"
+msgstr "Ruang kerja pelajar"
+
+msgid "Student navigation"
+msgstr "Navigasi pelajar"
+
+msgid "You don't have to do it alone."
+msgstr "Anda tidak perlu melaluinya seorang diri."
+
+msgid "Find urgent support"
+msgstr "Cari sokongan segera"
+
+msgid "Account settings"
+msgstr "Tetapan akaun"
+
+msgid "Sign out"
+msgstr "Log keluar"
+
+msgid "Skip to main content"
+msgstr "Langkau ke kandungan utama"
+
+msgid "Sidebar"
+msgstr "Bar sisi"
+
+msgid "Open menu"
+msgstr "Buka menu"
+
+msgid "Breadcrumb"
+msgstr "Jejak halaman"
+
+msgid "Student portal"
+msgstr "Portal pelajar"
+
+msgid "Private and confidential"
+msgstr "Peribadi dan sulit"
+
+msgid "Accessibility settings"
+msgstr "Tetapan kebolehcapaian"
+
+msgid "Notifications"
+msgstr "Notifikasi"
+
+msgid "Account menu for {0}"
+msgstr "Menu akaun untuk {0}"
+
+msgid "Your wellbeing matters."
+msgstr "Kesejahteraan anda penting."
+
+msgid "Privacy and confidentiality"
+msgstr "Privasi dan kerahsiaan"
+
+msgid "Help centre"
+msgstr "Pusat bantuan"
+
+msgid "Menu"
+msgstr "Menu"
+
+msgid "Close menu"
+msgstr "Tutup menu"
+
+msgid "Close accessibility settings"
+msgstr "Tutup tetapan kebolehcapaian"
+
+msgid "These settings are saved on this device."
+msgstr "Tetapan ini disimpan pada peranti ini."
+
+msgid "Language"
+msgstr "Bahasa"
+
+msgid "Theme"
+msgstr "Tema"
+
+msgid "Match my device"
+msgstr "Ikut peranti saya"
+
+msgid "Light"
+msgstr "Cerah"
+
+msgid "Dark"
+msgstr "Gelap"
+
+msgid "Text size"
+msgstr "Saiz teks"
+
+msgid "Decrease text size"
+msgstr "Kecilkan saiz teks"
+
+msgid "Increase text size"
+msgstr "Besarkan saiz teks"
+
+msgid "High contrast (always light)"
+msgstr "Kontras tinggi (sentiasa cerah)"
+
+msgid "Easy-to-read font"
+msgstr "Fon mudah dibaca"
+
+msgid "Wider text spacing"
+msgstr "Jarak teks lebih luas"
+
+msgid "Reduce motion"
+msgstr "Kurangkan pergerakan"
+
+msgid "Reset to default"
+msgstr "Set semula ke lalai"
+

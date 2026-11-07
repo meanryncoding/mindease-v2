@@ -17,6 +17,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Cake\Controller\Controller;
+use Cake\I18n\I18n;
 
 /**
  * Application Controller
@@ -43,6 +44,12 @@ class AppController extends Controller
 
         $this->loadComponent('Flash');
         $this->loadComponent('Authentication.Authentication');
+
+                // Pick the language from the cookie (default English) and share it with the views.
+        $cookieLang = $this->request->getCookie('mindease_lang');
+        $lang = in_array($cookieLang, ['en', 'ms'], true) ? $cookieLang : 'en';
+        I18n::setLocale($lang);
+        $this->set('lang', $lang);
 
         /*
          * Enable the following component for recommended CakePHP form protection settings.
