@@ -7,6 +7,8 @@ class DashboardController extends AppController
 {
     public function student()
     {
+        $this->viewBuilder()->setLayout('student');
+
         return $this->guard('student');
     }
 

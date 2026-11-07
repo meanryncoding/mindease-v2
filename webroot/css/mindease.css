@@ -162,3 +162,58 @@ body { font-family: 'Inter', system-ui, sans-serif; color: var(--me-ink); }
     .brand-glow, .brand-wave, .mindease-hero-logo { animation: none; }
     .brand-dots { display: none; }
 }
+
+
+/* ===== Student portal ===== */
+.skip-link {
+    position: absolute; left: -999px; top: 0; z-index: 2000;
+    background: #fff; color: var(--me-purple); padding: .6rem 1rem; border-radius: 0 0 .5rem 0; font-weight: 600;
+}
+.skip-link:focus { left: 0; }
+:focus-visible { outline: 3px solid #7c5cbf; outline-offset: 2px; }
+
+.portal-body { background: #f7f6fb; }
+.portal { display: flex; min-height: 100vh; }
+.portal-sidebar {
+    width: 260px; flex: 0 0 260px; background: #fff; border-right: 1px solid var(--me-border);
+    position: sticky; top: 0; height: 100vh; flex-direction: column; padding: 1.25rem 1rem; overflow-y: auto;
+}
+.portal-main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.portal-topbar {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: .8rem 1.5rem; background: #fff; border-bottom: 1px solid var(--me-border);
+}
+.portal-content { flex: 1; width: 100%; max-width: 1200px; margin: 0 auto; padding: 1.5rem; }
+.portal-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; padding: 1rem 1.5rem; }
+
+.portal-logo { height: 34px; width: auto; }
+.portal-brand { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.35rem; color: var(--me-purple); }
+.portal-org { font-size: .62rem; letter-spacing: .06em; color: var(--me-muted); }
+.workspace-pill {
+    display: inline-block; background: var(--me-lavender); color: var(--me-purple);
+    border-radius: 2rem; padding: .2rem .7rem; font-size: .72rem; font-weight: 500;
+}
+
+.nav-item-link {
+    display: flex; align-items: center; gap: .7rem; padding: .6rem .8rem; border-radius: .6rem;
+    color: var(--me-ink); text-decoration: none; font-size: .9rem;
+}
+.nav-item-link:hover { background: #f3f0f9; }
+.nav-item-link[aria-current="page"] { background: var(--me-lavender); color: var(--me-purple); font-weight: 600; }
+
+.support-card { background: #dfeadf; border-radius: .8rem; padding: .9rem; font-size: .82rem; color: #2b3d2f; }
+
+.avatar {
+    width: 2.2rem; height: 2.2rem; border-radius: 50%; border: 0; flex: 0 0 auto;
+    background: var(--me-lavender); color: var(--me-purple);
+    display: inline-flex; align-items: center; justify-content: center; font-size: .75rem; font-weight: 600;
+}
+
+.card-soft { background: #fff; border: 1px solid var(--me-border); border-radius: 1rem; padding: 1.25rem; height: 100%; }
+.card-hero { background: var(--me-lavender); border-color: #e1dbef; }
+.card-calm { background: #dfeadf; border-color: #cfe0cf; color: #2b3d2f; }
+.eyebrow { font-size: .68rem; letter-spacing: .06em; color: var(--me-muted); font-weight: 500; }
+.hero-card-img { height: 110px; width: auto; }
+.stat-number { font-size: 2rem; font-weight: 600; }
+.chip { display: inline-block; background: var(--me-lavender); color: var(--me-purple); border-radius: 2rem; padding: .15rem .6rem; font-size: .72rem; font-weight: 500; }
+.chip-up { background: #dfeadf; color: #2f5d3a; }

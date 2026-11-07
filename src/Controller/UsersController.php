@@ -15,6 +15,7 @@ class UsersController extends AppController
 
     public function login()
     {
+        $this->response = $this->response->withDisabledCache();
         $this->viewBuilder()->setLayout('auth');
         $result = $this->Authentication->getResult();
 
