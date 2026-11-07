@@ -92,19 +92,19 @@ $change = $latest - $coords[count($coords) - 2][3];
             </div>
             <p class="small text-muted mb-1">Higher = more positive wellbeing</p>
 
-            <svg viewBox="0 0 <?= $width ?> <?= $height ?>" class="w-100" role="img" aria-labelledby="chart-title chart-desc">
+                        <svg viewBox="0 0 <?= $width ?> <?= $height ?>" class="w-100" role="img" aria-labelledby="chart-title chart-desc">
                 <title id="chart-title">Wellbeing score over time</title>
                 <desc id="chart-desc">Line chart of sample wellbeing scores from <?= h($first[2]) ?> (<?= $first[3] ?>) to <?= h($last[2]) ?> (<?= $latest ?>). The same values are listed in a table for screen readers.</desc>
                 <?php foreach ([0, 50, 100] as $g) :
                     $gy = round($padTop + $plotHeight * (1 - $g / 100), 1); ?>
-                    <line x1="<?= $padLeft ?>" y1="<?= $gy ?>" x2="<?= $width - $padRight ?>" y2="<?= $gy ?>" stroke="#e4e1ea" stroke-width="1"/>
-                    <text x="<?= $padLeft - 6 ?>" y="<?= $gy + 3 ?>" text-anchor="end" font-size="9" fill="#6f687a"><?= $g ?></text>
+                    <line class="chart-grid" x1="<?= $padLeft ?>" y1="<?= $gy ?>" x2="<?= $width - $padRight ?>" y2="<?= $gy ?>"/>
+                    <text class="chart-label" x="<?= $padLeft - 6 ?>" y="<?= $gy + 3 ?>" text-anchor="end"><?= $g ?></text>
                 <?php endforeach; ?>
-                <polygon points="<?= $area ?>" fill="rgba(155,131,196,.18)"/>
-                <polyline points="<?= $line ?>" fill="none" stroke="#9b83c4" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                <polygon class="chart-area" points="<?= $area ?>"/>
+                <polyline class="chart-line" points="<?= $line ?>"/>
                 <?php foreach ($coords as $i => $c) : ?>
-                    <circle cx="<?= $c[0] ?>" cy="<?= $c[1] ?>" r="<?= $i === count($coords) - 1 ? 4 : 2.5 ?>" fill="#6b4fa0"/>
-                    <text x="<?= $c[0] ?>" y="<?= $height - 6 ?>" text-anchor="middle" font-size="9" fill="#6f687a"><?= h($c[2]) ?></text>
+                    <circle class="chart-dot" cx="<?= $c[0] ?>" cy="<?= $c[1] ?>" r="<?= $i === count($coords) - 1 ? 4 : 2.5 ?>"/>
+                    <text class="chart-label" x="<?= $c[0] ?>" y="<?= $height - 6 ?>" text-anchor="middle"><?= h($c[2]) ?></text>
                 <?php endforeach; ?>
             </svg>
 
@@ -125,7 +125,7 @@ $change = $latest - $coords[count($coords) - 2][3];
             <i class="bi bi-wind fs-5" aria-hidden="true"></i>
             <h2 id="pause-title" class="h6 fw-semibold mt-2 mb-2">Take a gentle pause</h2>
             <p class="small mb-3">Try a two-minute breathing exercise between your classes.</p>
-            <a href="#" class="fw-medium text-decoration-none small" style="color:#2f5d3a">Start breathing exercise <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            <a href="#" class="fw-medium text-decoration-none small link-green">Start breathing exercise <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
         </section>
     </div>
 

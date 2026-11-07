@@ -18,8 +18,8 @@ $navVars = ['name' => $name, 'initials' => $initials];
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:wght@500;600&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <?= $this->Html->css('mindease.css?v=4') ?>
-    <?= $this->Html->script('accessibility.js?v=1') ?>
+    <?= $this->Html->css('mindease.css?v=5') ?>
+    <?= $this->Html->script('accessibility.js?v=2') ?>
     <?= $this->fetch('css') ?>
 </head>
 <body class="portal-body">
@@ -33,7 +33,7 @@ $navVars = ['name' => $name, 'initials' => $initials];
         <div class="portal-main">
             <header class="portal-topbar">
                 <div class="d-flex align-items-center gap-2">
-                    <button class="btn btn-light d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open menu">
+                    <button class="btn-ghost d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open menu">
                         <i class="bi bi-list" aria-hidden="true"></i>
                     </button>
                     <nav aria-label="Breadcrumb">
@@ -44,13 +44,17 @@ $navVars = ['name' => $name, 'initials' => $initials];
                     </nav>
                 </div>
 
-                <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center gap-2 gap-md-3">
                     <span class="small text-muted d-none d-md-inline"><i class="bi bi-lock" aria-hidden="true"></i> Private &amp; confidential</span>
-                    <button type="button" class="btn btn-light btn-sm" data-bs-toggle="offcanvas" data-bs-target="#a11yPanel" aria-controls="a11yPanel">
+                    <button type="button" class="btn-ghost" data-theme-toggle aria-pressed="false" aria-label="Dark mode">
+                        <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i>
+                        <i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn-ghost" data-bs-toggle="offcanvas" data-bs-target="#a11yPanel" aria-controls="a11yPanel">
                         <i class="bi bi-universal-access" aria-hidden="true"></i>
                         <span class="visually-hidden">Accessibility settings</span>
                     </button>
-                    <button type="button" class="btn btn-light btn-sm" aria-label="Notifications">
+                    <button type="button" class="btn-ghost" aria-label="Notifications">
                         <i class="bi bi-bell" aria-hidden="true"></i>
                     </button>
                     <div class="dropdown">
@@ -84,7 +88,7 @@ $navVars = ['name' => $name, 'initials' => $initials];
         </div>
     </div>
 
-    <!-- Accessibility settings -->
+    <!-- Display and accessibility settings -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="a11yPanel" aria-labelledby="a11yTitle">
         <div class="offcanvas-header">
             <h2 class="offcanvas-title h5" id="a11yTitle">Accessibility settings</h2>
@@ -92,6 +96,22 @@ $navVars = ['name' => $name, 'initials' => $initials];
         </div>
         <div class="offcanvas-body">
             <p class="small text-muted">These settings are saved on this device.</p>
+
+            <fieldset class="mb-4">
+                <legend class="h6">Theme</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="a11yTheme" id="a11yThemeSystem" value="system">
+                    <label class="form-check-label" for="a11yThemeSystem">Match my device</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="a11yTheme" id="a11yThemeLight" value="light">
+                    <label class="form-check-label" for="a11yThemeLight">Light</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="a11yTheme" id="a11yThemeDark" value="dark">
+                    <label class="form-check-label" for="a11yThemeDark">Dark</label>
+                </div>
+            </fieldset>
 
             <fieldset class="mb-4">
                 <legend class="h6">Text size</legend>
@@ -104,7 +124,7 @@ $navVars = ['name' => $name, 'initials' => $initials];
 
             <div class="form-check form-switch mb-3">
                 <input class="form-check-input" type="checkbox" role="switch" id="a11yContrast">
-                <label class="form-check-label" for="a11yContrast">High contrast</label>
+                <label class="form-check-label" for="a11yContrast">High contrast (always light)</label>
             </div>
             <div class="form-check form-switch mb-3">
                 <input class="form-check-input" type="checkbox" role="switch" id="a11yFont">

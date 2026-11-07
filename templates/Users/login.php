@@ -16,9 +16,15 @@ $dots = [[12, 6, 0, 11], [28, 4, 3, 14], [46, 7, 6, 12], [63, 4, 2, 15], [78, 6,
 
     <!-- Left panel: sign-in form -->
     <section class="auth-side auth-form-side">
-        <div class="d-flex justify-content-between small text-muted">
+        <div class="d-flex justify-content-between align-items-center small text-muted">
             <span>Student wellness portal</span>
-            <span><a href="#" class="text-dark text-decoration-none fw-medium">English</a> / <a href="#" class="text-muted text-decoration-none">BM</a></span>
+            <span class="d-flex align-items-center gap-3">
+                <span><a href="#" class="lang-link lang-link-active">English</a> / <a href="#" class="lang-link">BM</a></span>
+                <button type="button" class="btn-ghost" data-theme-toggle aria-pressed="false" aria-label="Dark mode">
+                    <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i>
+                    <i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+                </button>
+            </span>
         </div>
 
         <div class="auth-form-body">
