@@ -44,6 +44,18 @@ class UsersTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        
+           // Appointments, availability slots and notifications
+           $this->hasMany('StudentAppointments', [
+               'className' => 'Appointments',
+               'foreignKey' => 'student_id',
+           ]);
+           $this->hasMany('CounselorAppointments', [
+               'className' => 'Appointments',
+               'foreignKey' => 'counselor_id',
+           ]);
+           $this->hasMany('CounselorAvailability', ['foreignKey' => 'counselor_id']);
+           $this->hasMany('Notifications', ['foreignKey' => 'user_id']);
     }
 
     /**
