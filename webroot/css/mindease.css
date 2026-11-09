@@ -323,3 +323,55 @@ body { font-family: 'Inter', system-ui, sans-serif; background-color: var(--me-b
 .a11y-contrast .chip, .a11y-contrast .chip-up, .a11y-contrast .workspace-pill { border: 1px solid #000; }
 .a11y-contrast .avatar { background: #000; color: #fff; }
 .a11y-contrast .btn-me { box-shadow: none; }
+
+/* ===== Booking ===== */
+.step-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; padding: 0; }
+.step-pill {
+    padding: .6rem .9rem; border: 1px solid var(--me-border); border-radius: .7rem;
+    background: var(--me-surface); font-size: .82rem; color: var(--me-muted);
+}
+.step-pill.is-active { background: var(--me-lavender); border-color: var(--me-lavender-strong); color: var(--me-ink); font-weight: 600; }
+.step-pill.is-done { color: var(--me-ink); }
+.step-num { font-weight: 600; margin-right: .4rem; }
+
+.counselor-option {
+    display: flex; align-items: center; gap: .75rem; padding: .8rem 1rem; cursor: pointer;
+    border: 1px solid var(--me-border); border-radius: .8rem; background: var(--me-surface);
+}
+.counselor-option + .counselor-option { margin-top: .6rem; }
+.counselor-option:hover { border-color: var(--me-lavender-strong); }
+.counselor-option.is-selected { background: var(--me-lavender); border-color: var(--me-lavender-strong); }
+.counselor-option:focus-within { outline: 3px solid #7c5cbf; outline-offset: 2px; }
+.counselor-option .option-check { color: var(--me-accent); opacity: 0; }
+.counselor-option.is-selected .option-check { opacity: 1; }
+
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: .25rem; text-align: center; }
+.cal-head { font-size: .72rem; color: var(--me-muted); padding: .25rem 0; }
+.cal-day {
+    border: 0; background: transparent; color: var(--me-ink); border-radius: .6rem;
+    padding: .55rem 0; font-size: .85rem; font-weight: 500;
+}
+.cal-day:disabled { color: var(--me-muted); opacity: .45; cursor: default; }
+.cal-day.is-available { background: var(--me-lavender); cursor: pointer; }
+.cal-day.is-available:hover { outline: 1px solid var(--me-lavender-strong); }
+.cal-day.is-selected { background: var(--me-brand-2); color: #fff; }
+
+.slot-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .5rem; }
+.slot-btn {
+    border: 1px solid var(--me-border); background: var(--me-surface); color: var(--me-ink);
+    border-radius: .6rem; padding: .55rem .5rem; font-size: .85rem;
+}
+.slot-btn:hover { border-color: var(--me-lavender-strong); }
+.slot-btn[aria-pressed="true"] { background: var(--me-brand-2); border-color: var(--me-brand-2); color: #fff; }
+
+.summary-list dt { color: var(--me-muted); font-weight: 500; font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; }
+.summary-list dd { margin-bottom: .6rem; }
+
+.session-row {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: .8rem 1rem; border: 1px solid var(--me-border); border-radius: .8rem;
+    color: var(--me-ink); text-decoration: none; background: var(--me-surface);
+}
+.session-row:hover { border-color: var(--me-lavender-strong); background: var(--me-hover); color: var(--me-ink); }
+
+@media (max-width: 575px) { .step-row { grid-template-columns: 1fr; } }

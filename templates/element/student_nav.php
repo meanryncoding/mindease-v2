@@ -11,8 +11,11 @@ $items = [
     [__('Results & progress'), '#', 'graph-up'],
     [__('Counselor feedback'), '#', 'chat-left-text'],
     [__('Support resources'), '#', 'book'],
-    [__('Counseling sessions'), '#', 'calendar-event'],
+    [__('Counseling sessions'), '/student/sessions', 'calendar-event'],
 ];
+
+// Pages that belong to a menu item, so it stays highlighted on its sub-pages.
+$sections = ['/student/sessions' => ['/student/sessions', '/student/book']];
 ?>
 <div class="d-flex align-items-center gap-2 mb-1">
     <?= $this->Html->image('mindease-logo.gif', ['alt' => '', 'class' => 'portal-logo']) ?>
@@ -24,8 +27,17 @@ $items = [
 <nav aria-label="<?= __('Student navigation') ?>" class="mt-3">
     <ul class="list-unstyled mb-0 d-grid gap-1">
         <?php foreach ($items as [$label, $url, $icon]) : ?>
+            <?php
+            $prefixes = $sections[$url] ?? [$url];
+            $isActive = false;
+            foreach ($prefixes as $prefix) {
+                if ($current === $prefix || ($prefix !== '/student' && str_starts_with($current, $prefix . '/'))) {
+                    $isActive = true;
+                }
+            }
+            ?>
             <li>
-                <a href="<?= h($url) ?>" class="nav-item-link"<?= $url === $current ? ' aria-current="page"' : '' ?>>
+                <a href="<?= h($url) ?>" class="nav-item-link"<?= $isActive ? ' aria-current="page"' : '' ?>>
                     <i class="bi bi-<?= $icon ?>" aria-hidden="true"></i><?= h($label) ?>
                 </a>
             </li>

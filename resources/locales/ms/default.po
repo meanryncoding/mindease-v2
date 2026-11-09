@@ -91,15 +91,6 @@ msgstr "Pengalaman kesejahteraan pelajar secara konsep. Rekod dan skor contoh ha
 msgid "Overview"
 msgstr "Ringkasan"
 
-msgid "Student wellbeing counselor"
-msgstr "Kaunselor kesejahteraan pelajar"
-
-msgid "{0} · 10:00–10:50 AM"
-msgstr "{0} · 10:00–10:50 pagi"
-
-msgid "Online · Private video session"
-msgstr "Dalam talian · Sesi video peribadi"
-
 msgid "A little space for you, {0}."
 msgstr "Sedikit ruang untuk anda, {0}."
 
@@ -120,12 +111,6 @@ msgstr "Berhenti seketika, kenali perasaan anda, dan berikan ruang untuk apa yan
 
 msgid "Explore your wellbeing toolkit"
 msgstr "Terokai alat kesejahteraan anda"
-
-msgid "Your next session"
-msgstr "Sesi anda yang seterusnya"
-
-msgid "View appointment"
-msgstr "Lihat temu janji"
 
 msgid "Your wellbeing, over time"
 msgstr "Kesejahteraan anda dari semasa ke semasa"
@@ -177,6 +162,18 @@ msgstr "Anda telah meluangkan masa untuk bermuhasabah minggu ini. Mari kita teru
 
 msgid "Read feedback"
 msgstr "Baca maklum balas"
+
+msgid "Your next session"
+msgstr "Sesi anda yang seterusnya"
+
+msgid "You have no upcoming session. Taking the first step is easy."
+msgstr "Anda tiada sesi akan datang. Mengambil langkah pertama itu mudah."
+
+msgid "Book a session"
+msgstr "Tempah sesi"
+
+msgid "View appointment"
+msgstr "Lihat temu janji"
 
 msgid "Wellness assessment"
 msgstr "Penilaian kesejahteraan"
@@ -297,4 +294,556 @@ msgstr "Kurangkan pergerakan"
 
 msgid "Reset to default"
 msgstr "Set semula ke lalai"
+
+msgid "Sorry, that time is no longer available. Please choose another time."
+msgstr "Maaf, masa itu sudah tidak tersedia. Sila pilih masa lain."
+
+msgid "Please choose a counselor."
+msgstr "Sila pilih kaunselor."
+
+msgid "No times available on this day."
+msgstr "Tiada masa tersedia pada hari ini."
+
+msgid "Select a date to see times."
+msgstr "Pilih tarikh untuk melihat masa."
+
+msgid "Times on {0}"
+msgstr "Masa pada {0}"
+
+msgid "This counselor has no free times right now. Please try another counselor."
+msgstr "Kaunselor ini tiada masa kosong sekarang. Sila cuba kaunselor lain."
+
+msgid "Ready to request"
+msgstr "Sedia untuk dipohon"
+
+msgid "Select a time"
+msgstr "Pilih masa"
+
+msgid "Online · Private video session"
+msgstr "Dalam talian · Sesi video peribadi"
+
+msgid "In person · {0}"
+msgstr "Bersemuka · {0}"
+
+msgid "Online session · 50 minutes"
+msgstr "Sesi dalam talian · 50 minit"
+
+msgid "In-person session · 50 minutes"
+msgstr "Sesi bersemuka · 50 minit"
+
+msgid "Make time for yourself"
+msgstr "Luangkan masa untuk diri sendiri"
+
+msgid "Choose someone to talk to and a time that fits your day."
+msgstr "Pilih seseorang untuk berbual dan masa yang sesuai dengan hari anda."
+
+msgid "Booking steps"
+msgstr "Langkah tempahan"
+
+msgid "Choose counselor"
+msgstr "Pilih kaunselor"
+
+msgid "Confirm session"
+msgstr "Sahkan sesi"
+
+msgid "No counselors are available to book right now. Please check back soon."
+msgstr "Tiada kaunselor tersedia untuk ditempah sekarang. Sila semak semula tidak lama lagi."
+
+msgid "Choose your counselor"
+msgstr "Pilih kaunselor anda"
+
+msgid "Find a comfortable fit. You can choose a different counselor later."
+msgstr "Cari kaunselor yang anda selesa. Anda boleh memilih kaunselor lain kemudian."
+
+msgid "Find a time to talk"
+msgstr "Cari masa untuk berbual"
+
+msgid "All times are in Malaysia Time (MYT, UTC+8)."
+msgstr "Semua masa dalam Waktu Malaysia (MYT, UTC+8)."
+
+msgid "Previous month"
+msgstr "Bulan sebelumnya"
+
+msgid "Next month"
+msgstr "Bulan seterusnya"
+
+msgid "Your video link will appear in your appointment details after your counselor confirms."
+msgstr "Pautan video anda akan muncul dalam butiran temu janji selepas kaunselor anda mengesahkan."
+
+msgid "Your counselor will confirm the room before your session."
+msgstr "Kaunselor anda akan mengesahkan bilik sebelum sesi anda."
+
+msgid "Your session summary"
+msgstr "Ringkasan sesi anda"
+
+msgid "When"
+msgstr "Bila"
+
+msgid "Where"
+msgstr "Di mana"
+
+msgid "How would you like to meet?"
+msgstr "Bagaimana anda ingin bertemu?"
+
+msgid "Online"
+msgstr "Dalam talian"
+
+msgid "In person"
+msgstr "Bersemuka"
+
+msgid "Anything you'd like to share? (optional)"
+msgstr "Ada apa-apa yang anda ingin kongsikan? (pilihan)"
+
+msgid "I'd like to talk about sleep and study balance."
+msgstr "Saya ingin berbual tentang tidur dan keseimbangan pelajaran."
+
+msgid "Do you need anything to make the session accessible? (optional)"
+msgstr "Adakah anda memerlukan sesuatu untuk menjadikan sesi ini mudah diakses? (pilihan)"
+
+msgid "For example, a sign language interpreter or live captions."
+msgstr "Contohnya, jurubahasa isyarat atau sari kata langsung."
+
+msgid "I understand the confidentiality information and consent to this session."
+msgstr "Saya faham maklumat kerahsiaan dan bersetuju dengan sesi ini."
+
+msgid "Request appointment"
+msgstr "Mohon temu janji"
+
+msgid "Plans can change"
+msgstr "Rancangan boleh berubah"
+
+msgid "Your counselor will review your request and confirm it. You can cancel any time from your appointment details. This booking is not an urgent-support service."
+msgstr "Kaunselor anda akan menyemak permohonan anda dan mengesahkannya. Anda boleh membatalkan pada bila-bila masa daripada butiran temu janji. Tempahan ini bukan perkhidmatan sokongan segera."
+
+msgid "You've made space for support."
+msgstr "Anda telah meluangkan ruang untuk sokongan."
+
+msgid "Your appointment"
+msgstr "Temu janji anda"
+
+msgid "Your request has been sent. You will see an update here when your counselor responds."
+msgstr "Permohonan anda telah dihantar. Anda akan melihat kemas kini di sini apabila kaunselor anda membalas."
+
+msgid "Details of your counseling session."
+msgstr "Butiran sesi kaunseling anda."
+
+msgid "Booking reference · {0}"
+msgstr "Rujukan tempahan · {0}"
+
+msgid "Message from your counselor"
+msgstr "Mesej daripada kaunselor anda"
+
+msgid "All my sessions"
+msgstr "Semua sesi saya"
+
+msgid "Cancel appointment"
+msgstr "Batalkan temu janji"
+
+msgid "Cancel this appointment?"
+msgstr "Batalkan temu janji ini?"
+
+msgid "Before your session"
+msgstr "Sebelum sesi anda"
+
+msgid "Please arrive a few minutes early. Your counselor will confirm the room before your session. You are welcome to bring a few notes, or simply come as you are. Your counselor will explain confidentiality and its limits at the start."
+msgstr "Sila tiba beberapa minit lebih awal. Kaunselor anda akan mengesahkan bilik sebelum sesi anda. Anda dialu-alukan membawa beberapa catatan, atau datang sahaja seadanya. Kaunselor anda akan menerangkan kerahsiaan dan batasannya pada permulaan sesi."
+
+msgid "Find a quiet, private place and check your internet connection. You are welcome to bring a few notes, or simply come as you are. Your counselor will explain confidentiality and its limits at the start."
+msgstr "Cari tempat yang tenang dan peribadi, dan semak sambungan internet anda. Anda dialu-alukan membawa beberapa catatan, atau datang sahaja seadanya. Kaunselor anda akan menerangkan kerahsiaan dan batasannya pada permulaan sesi."
+
+msgid "Your requests and upcoming sessions in one place."
+msgstr "Permohonan dan sesi akan datang anda di satu tempat."
+
+msgid "Upcoming and pending"
+msgstr "Akan datang dan belum disahkan"
+
+msgid "You have no upcoming sessions."
+msgstr "Anda tiada sesi akan datang."
+
+msgid "Past and closed"
+msgstr "Lepas dan ditutup"
+
+msgid "Pending"
+msgstr "Menunggu"
+
+msgid "Confirmed"
+msgstr "Disahkan"
+
+msgid "Not available"
+msgstr "Tidak tersedia"
+
+msgid "New time proposed"
+msgstr "Masa baharu dicadangkan"
+
+msgid "Declined"
+msgstr "Tidak diterima"
+
+msgid "Cancelled"
+msgstr "Dibatalkan"
+
+msgid "Completed"
+msgstr "Selesai"
+
+msgid "Please choose a date and time."
+msgstr "Sila pilih tarikh dan masa."
+
+msgid "Please choose a time in the future."
+msgstr "Sila pilih masa pada masa hadapan."
+
+msgid "Please choose online or in person."
+msgstr "Sila pilih dalam talian atau bersemuka."
+
+msgid "Please keep this under 1000 characters."
+msgstr "Sila hadkan kurang daripada 1000 aksara."
+
+msgid "Please keep this under 500 characters."
+msgstr "Sila hadkan kurang daripada 500 aksara."
+
+msgid "Please confirm that you understand the confidentiality information."
+msgstr "Sila sahkan bahawa anda memahami maklumat kerahsiaan."
+
+msgid "Counseling Unit (room confirmed by your counselor)"
+msgstr "Unit Kaunseling (bilik disahkan oleh kaunselor anda)"
+
+msgid "Counselor portal"
+msgstr "Portal kaunselor"
+
+msgid "Care overview"
+msgstr "Gambaran penjagaan"
+
+msgid "Student caseload"
+msgstr "Senarai pelajar"
+
+msgid "Clinical notes"
+msgstr "Nota klinikal"
+
+msgid "Appointments"
+msgstr "Temu janji"
+
+msgid "Counselor workspace"
+msgstr "Ruang kerja kaunselor"
+
+msgid "Main navigation"
+msgstr "Navigasi utama"
+
+msgid "Records are confidential"
+msgstr "Rekod adalah sulit"
+
+msgid "Open a student record only when it is needed for their care."
+msgstr "Buka rekod pelajar hanya apabila perlu untuk penjagaan mereka."
+
+msgid "Accepted"
+msgstr "Diterima"
+
+msgid "less than 1 hr"
+msgstr "kurang 1 jam"
+
+msgid "{0} hr"
+msgstr "{0} jam"
+
+msgid "{0} d"
+msgstr "{0} hari"
+
+msgid "Welcome back, {0}"
+msgstr "Selamat kembali, {0}"
+
+msgid "Here is what needs your attention today."
+msgstr "Ini perkara yang memerlukan perhatian anda hari ini."
+
+msgid "Pending requests"
+msgstr "Permohonan menunggu"
+
+msgid "Waiting for your answer"
+msgstr "Menunggu jawapan anda"
+
+msgid "Sessions today"
+msgstr "Sesi hari ini"
+
+msgid "Confirmed for today"
+msgstr "Disahkan untuk hari ini"
+
+msgid "This week"
+msgstr "Minggu ini"
+
+msgid "Upcoming confirmed sessions"
+msgstr "Sesi disahkan yang akan datang"
+
+msgid "High priority"
+msgstr "Keutamaan tinggi"
+
+msgid "Coming soon"
+msgstr "Akan datang"
+
+msgid "Students who may need extra care will appear here once assessments are added."
+msgstr "Pelajar yang mungkin memerlukan perhatian lebih akan dipaparkan di sini selepas penilaian ditambah."
+
+msgid "Needs your attention"
+msgstr "Perlu perhatian anda"
+
+msgid "Nothing needs your attention right now."
+msgstr "Tiada apa yang memerlukan perhatian anda sekarang."
+
+msgid "New requests"
+msgstr "Permohonan baharu"
+
+msgid "Overdue"
+msgstr "Lewat"
+
+msgid "Waiting {0}"
+msgstr "Menunggu {0}"
+
+msgid "Urgent"
+msgstr "Segera"
+
+msgid "Session in {0}"
+msgstr "Sesi dalam {0}"
+
+msgid "Review"
+msgstr "Semak"
+
+msgid "Student updates"
+msgstr "Kemas kini pelajar"
+
+msgid "Today's sessions"
+msgstr "Sesi hari ini"
+
+msgid "You have no sessions today."
+msgstr "Anda tiada sesi hari ini."
+
+msgid "Confidentiality reminder"
+msgstr "Peringatan kerahsiaan"
+
+msgid "Student information is shared only for care purposes. Every record you open may be logged."
+msgstr "Maklumat pelajar dikongsi untuk tujuan penjagaan sahaja. Setiap rekod yang anda buka mungkin direkodkan."
+
+msgid "Answer new requests and see your week at a glance."
+msgstr "Jawab permohonan baharu dan lihat minggu anda sepintas lalu."
+
+msgid "Week navigation"
+msgstr "Navigasi minggu"
+
+msgid "Previous week"
+msgstr "Minggu sebelumnya"
+
+msgid "Next week"
+msgstr "Minggu seterusnya"
+
+msgid "Today"
+msgstr "Hari ini"
+
+msgid "No new requests right now."
+msgstr "Tiada permohonan baharu buat masa ini."
+
+msgid "{0} sessions"
+msgstr "{0} sesi"
+
+msgid "No sessions on this day."
+msgstr "Tiada sesi pada hari ini."
+
+msgid "Appointment details"
+msgstr "Butiran temu janji"
+
+msgid "Select a request or a session to see the details here."
+msgstr "Pilih permohonan atau sesi untuk melihat butiran di sini."
+
+msgid "Format"
+msgstr "Format"
+
+msgid "Proposed new time"
+msgstr "Masa baharu dicadangkan"
+
+msgid "Reference"
+msgstr "Rujukan"
+
+msgid "Message from the student"
+msgstr "Mesej daripada pelajar"
+
+msgid "No message."
+msgstr "Tiada mesej."
+
+msgid "Access needs"
+msgstr "Keperluan akses"
+
+msgid "Video link"
+msgstr "Pautan video"
+
+msgid "Your note to the student"
+msgstr "Nota anda kepada pelajar"
+
+msgid "This appointment was cancelled. The time is free again for other students."
+msgstr "Temu janji ini telah dibatalkan. Masa ini tersedia semula untuk pelajar lain."
+
+msgid "Waiting for the student to accept or decline the new time."
+msgstr "Menunggu pelajar menerima atau menolak masa baharu."
+
+msgid "This time has already passed. You can only decline this request."
+msgstr "Masa ini telah berlalu. Anda hanya boleh menolak permohonan ini."
+
+msgid "Confirm this session"
+msgstr "Sahkan sesi ini"
+
+msgid "Video link (optional)"
+msgstr "Pautan video (pilihan)"
+
+msgid "Note to the student (optional)"
+msgstr "Nota kepada pelajar (pilihan)"
+
+msgid "Room and note to the student (optional)"
+msgstr "Bilik dan nota kepada pelajar (pilihan)"
+
+msgid "Confirm appointment"
+msgstr "Sahkan temu janji"
+
+msgid "Suggest another time"
+msgstr "Cadangkan masa lain"
+
+msgid "New time"
+msgstr "Masa baharu"
+
+msgid "Choose a time"
+msgstr "Pilih masa"
+
+msgid "Send new time"
+msgstr "Hantar masa baharu"
+
+msgid "You have no free slots in the next 3 weeks."
+msgstr "Anda tiada slot kosong dalam 3 minggu akan datang."
+
+msgid "Not available at this time"
+msgstr "Tidak tersedia pada masa ini"
+
+msgid "Send: not available"
+msgstr "Hantar: tidak tersedia"
+
+msgid "Cancel this session"
+msgstr "Batalkan sesi ini"
+
+msgid "Reason for the student (optional)"
+msgstr "Sebab untuk pelajar (pilihan)"
+
+msgid "Cancel session"
+msgstr "Batalkan sesi"
+
+msgid "This request has already been answered."
+msgstr "Permohonan ini sudah dijawab."
+
+msgid "This time has already passed. Please decline the request."
+msgstr "Masa ini telah berlalu. Sila tolak permohonan ini."
+
+msgid "Please enter a valid link that starts with https://"
+msgstr "Sila masukkan pautan sah yang bermula dengan https://"
+
+msgid "Appointment confirmed. The student has been notified."
+msgstr "Temu janji disahkan. Pelajar telah dimaklumkan."
+
+msgid "Sorry, something went wrong. Please try again."
+msgstr "Maaf, sesuatu telah berlaku. Sila cuba lagi."
+
+msgid "Please choose a new time."
+msgstr "Sila pilih masa baharu."
+
+msgid "Sorry, that time is no longer free. Please choose another time."
+msgstr "Maaf, masa itu tidak lagi kosong. Sila pilih masa lain."
+
+msgid "New time suggested. The student has been notified."
+msgstr "Masa baharu telah dicadangkan. Pelajar telah dimaklumkan."
+
+msgid "The student has been told this time is not available."
+msgstr "Pelajar telah dimaklumkan bahawa masa ini tidak tersedia."
+
+msgid "Only confirmed sessions can be cancelled."
+msgstr "Hanya sesi yang disahkan boleh dibatalkan."
+
+msgid "The session was cancelled and the student has been notified."
+msgstr "Sesi dibatalkan dan pelajar telah dimaklumkan."
+
+msgid "Sorry, that new time is no longer available. Please book another time."
+msgstr "Maaf, masa baharu itu tidak lagi tersedia. Sila tempah masa lain."
+
+msgid "Your counselor suggested a new time"
+msgstr "Kaunselor anda mencadangkan masa baharu"
+
+msgid "Accept new time"
+msgstr "Terima masa baharu"
+
+msgid "Decline"
+msgstr "Tolak"
+
+msgid "Decline this new time?"
+msgstr "Tolak masa baharu ini?"
+
+msgid "Join video session"
+msgstr "Sertai sesi video"
+
+msgid "A student"
+msgstr "Seorang pelajar"
+
+msgid "Your counselor"
+msgstr "Kaunselor anda"
+
+msgid "{0} requested a session on {1}."
+msgstr "{0} memohon sesi pada {1}."
+
+msgid "{0} confirmed your session on {1}."
+msgstr "{0} mengesahkan sesi anda pada {1}."
+
+msgid "{0} is not available on {1}."
+msgstr "{0} tidak tersedia pada {1}."
+
+msgid "{0} cancelled the session on {1}."
+msgstr "{0} membatalkan sesi pada {1}."
+
+msgid "{0} cancelled your session on {1}."
+msgstr "{0} membatalkan sesi anda pada {1}."
+
+msgid "{0} suggested a new time: {1}."
+msgstr "{0} mencadangkan masa baharu: {1}."
+
+msgid "{0} accepted the new time: {1}."
+msgstr "{0} menerima masa baharu: {1}."
+
+msgid "{0} declined the new time: {1}."
+msgstr "{0} menolak masa baharu: {1}."
+
+msgid "Updates for you"
+msgstr "Kemas kini untuk anda"
+
+msgid "New"
+msgstr "Baharu"
+
+msgid "See all notifications"
+msgstr "Lihat semua notifikasi"
+
+msgid "{0} unread"
+msgstr "{0} belum dibaca"
+
+msgid "Mark all as read"
+msgstr "Tandakan semua sebagai dibaca"
+
+msgid "Unread"
+msgstr "Belum dibaca"
+
+msgid "You have no notifications yet."
+msgstr "Anda belum ada notifikasi."
+
+msgid "Updates about your appointments."
+msgstr "Kemas kini tentang temu janji anda."
+
+msgid "New appointment request"
+msgstr "Permohonan temu janji baharu"
+
+msgid "Appointment cancelled"
+msgstr "Temu janji dibatalkan"
+
+msgid "Appointment confirmed"
+msgstr "Temu janji disahkan"
+
+msgid "Appointment not available"
+msgstr "Temu janji tidak tersedia"
+
+msgid "New time accepted"
+msgstr "Masa baharu diterima"
+
+msgid "New time declined"
+msgstr "Masa baharu ditolak"
 

@@ -56,13 +56,50 @@ return function (RouteBuilder $routes): void {
          * to use (in this case, templates/Pages/home.php)...
          */
         $builder->connect('/', ['controller' => 'Users', 'action' => 'login']);
-$builder->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
-$builder->connect('/student', ['controller' => 'Dashboard', 'action' => 'student']);
-$builder->connect('/counselor', ['controller' => 'Dashboard', 'action' => 'counselor']);
-$builder->connect('/admin', ['controller' => 'Dashboard', 'action' => 'admin']);
-$builder->connect('/lang/{code}', ['controller' => 'Language', 'action' => 'change'])
-    ->setPass(['code'])
-    ->setPatterns(['code' => 'en|ms']);
+        $builder->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
+        $builder->connect('/student', ['controller' => 'Dashboard', 'action' => 'student']);
+        $builder->connect('/counselor', ['controller' => 'Counselor', 'action' => 'overview']);
+        $builder->connect('/admin', ['controller' => 'Dashboard', 'action' => 'admin']);
+
+        // Language switch (English / BM)
+        $builder->connect('/lang/{code}', ['controller' => 'Language', 'action' => 'change'])
+            ->setPass(['code'])
+            ->setPatterns(['code' => 'en|ms']);
+
+        // Student appointments
+        $builder->connect('/student/book', ['controller' => 'Appointments', 'action' => 'book']);
+        $builder->connect('/student/sessions', ['controller' => 'Appointments', 'action' => 'index']);
+        $builder->connect('/student/sessions/{id}', ['controller' => 'Appointments', 'action' => 'view'])
+            ->setPass(['id'])
+            ->setPatterns(['id' => '\d+']);
+        $builder->connect('/student/sessions/{id}/cancel', ['controller' => 'Appointments', 'action' => 'cancel'])
+            ->setPass(['id'])
+            ->setPatterns(['id' => '\d+']);
+
+        $builder->connect('/student/sessions/{id}/accept', ['controller' => 'Appointments', 'action' => 'acceptProposal'])
+            ->setPass(['id'])
+            ->setPatterns(['id' => '\\d+']);
+        $builder->connect('/student/sessions/{id}/decline', ['controller' => 'Appointments', 'action' => 'declineProposal'])
+            ->setPass(['id'])
+            ->setPatterns(['id' => '\\d+']);
+
+        // Counselor appointments
+        $builder->connect('/counselor/appointments', ['controller' => 'CounselorAppointments', 'action' => 'index']);
+        $builder->connect('/counselor/appointments/{id}', ['controller' => 'CounselorAppointments', 'action' => 'view'])
+            ->setPass(['id'])
+            ->setPatterns(['id' => '\d+']);
+        foreach (['confirm', 'propose', 'decline', 'cancel'] as $action) {
+            $builder->connect('/counselor/appointments/{id}/' . $action, ['controller' => 'CounselorAppointments', 'action' => $action])
+                ->setPass(['id'])
+                ->setPatterns(['id' => '\d+']);
+        }
+
+        // Notifications (students and counselors)
+        $builder->connect('/notifications', ['controller' => 'Notifications', 'action' => 'index']);
+        $builder->connect('/notifications/read-all', ['controller' => 'Notifications', 'action' => 'readAll']);
+        $builder->connect('/notifications/{id}/open', ['controller' => 'Notifications', 'action' => 'open'])
+            ->setPass(['id'])
+            ->setPatterns(['id' => '\\d+']);
 
         /*
          * ...and connect the rest of 'Pages' controller's URLs.

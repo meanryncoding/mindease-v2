@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Model\Entity;
 
+use Cake\Core\Configure;
 use Cake\ORM\Entity;
 
 /**
@@ -33,8 +34,28 @@ class Appointment extends Entity
 {
     protected array $_accessible = [
         'requested_start' => true,
+        'mode' => true,
         'message' => true,
         'access_needs' => true,
         'consent' => true,
     ];
+
+    /**
+     * Where in-person sessions take place. Change it with
+     * Configure::write('MindEase.inPersonLocation', '...') in config/app.php.
+     */
+    public static function inPersonLocation(): string
+    {
+        return (string)Configure::read('MindEase.inPersonLocation', __('Counseling Unit (room confirmed by your counselor)'));
+    }
+
+    /** Human-readable description of how the session takes place. */
+    public function modeLabel(): string
+    {
+        if ($this->mode === 'in_person') {
+            return __('In person · {0}', self::inPersonLocation());
+        }
+
+        return __('Online · Private video session');
+    }
 }

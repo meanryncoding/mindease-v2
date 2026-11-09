@@ -63,6 +63,10 @@ class AppointmentsTable extends Table
             ]);
 
         $validator
+            ->requirePresence('mode', 'create')
+            ->inList('mode', ['online', 'in_person'], __('Please choose online or in person.'));
+
+        $validator
             ->allowEmptyString('message')
             ->maxLength('message', 1000, __('Please keep this under 1000 characters.'));
 

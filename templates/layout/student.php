@@ -18,7 +18,7 @@ $navVars = ['name' => $name, 'initials' => $initials];
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:wght@500;600&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <?= $this->Html->css('mindease.css?v=5') ?>
+    <?= $this->Html->css('mindease.css?v=6') ?>
     <?= $this->Html->script('accessibility.js?v=2') ?>
     <?= $this->fetch('css') ?>
 </head>
@@ -55,11 +55,9 @@ $navVars = ['name' => $name, 'initials' => $initials];
                         <i class="bi bi-universal-access" aria-hidden="true"></i>
                         <span class="visually-hidden"><?= __('Accessibility settings') ?></span>
                     </button>
-                    <button type="button" class="btn-ghost" aria-label="<?= __('Notifications') ?>">
-                        <i class="bi bi-bell" aria-hidden="true"></i>
-                    </button>
+                    <?= $this->cell('NotificationBell') ?>
                     <div class="dropdown">
-                        <button class="avatar" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="<?= h(__('Account menu for %s', $name)) ?>"><?= h($initials) ?></button>
+                        <button class="avatar" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="<?= h(__('Account menu for {0}', $name)) ?>"><?= h($initials) ?></button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><span class="dropdown-item-text small text-muted"><?= h($email) ?></span></li>
                             <li><a class="dropdown-item" href="<?= $this->Url->build('/logout') ?>"><?= __('Sign out') ?></a></li>

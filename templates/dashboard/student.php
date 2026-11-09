@@ -5,12 +5,8 @@ $firstName = explode(' ', trim((string)$this->Identity->get('name')))[0];
 
 // SAMPLE DATA: replace with real data once assessments and appointments are connected.
 $points = [['2026-09-02', 37], ['2026-09-16', 46], ['2026-09-30', 41], ['2026-10-14', 58], ['2026-10-28', 64]];
-$session = [
-    'counselor' => 'Nadia Hassan',
-    'role' => __('Student wellbeing counselor'),
-    'when' => __('{0} · 10:00–10:50 AM', (new \Cake\I18n\DateTime('+3 days'))->i18nFormat('EEE, dd MMM y')),
-    'mode' => __('Online · Private video session'),
-];
+// SAMPLE DATA: the counselor note below is still a placeholder until counselor feedback is built.
+$sampleCounselor = 'Nadia Hassan';
 
 // Chart geometry
 $width = 600;
@@ -40,7 +36,7 @@ $first = $coords[0];
 $area = $line . ' ' . $last[0] . ',' . $baseY . ' ' . $first[0] . ',' . $baseY;
 $latest = $last[3];
 $change = $latest - $coords[count($coords) - 2][3];
-$counselorFirstName = explode(' ', $session['counselor'])[0];
+$counselorFirstName = explode(' ', $sampleCounselor)[0];
 ?>
 <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
     <div>
@@ -49,6 +45,8 @@ $counselorFirstName = explode(' ', $session['counselor'])[0];
     </div>
     <a href="#" class="btn btn-me px-4"><i class="bi bi-plus-lg me-2" aria-hidden="true"></i><?= __('Take a check-in') ?></a>
 </div>
+
+<?= $this->cell('StudentUpdates') ?>
 
 <div class="row g-3">
     <div class="col-lg-8">
@@ -64,19 +62,7 @@ $counselorFirstName = explode(' ', $session['counselor'])[0];
     </div>
 
     <div class="col-lg-4">
-        <section class="card-soft" aria-labelledby="session-title">
-            <h2 id="session-title" class="h6 fw-semibold mb-3"><?= __('Your next session') ?></h2>
-            <div class="d-flex align-items-center gap-2 mb-3">
-                <span class="avatar" aria-hidden="true">NH</span>
-                <div class="small lh-sm">
-                    <div class="fw-semibold"><?= h($session['counselor']) ?></div>
-                    <div class="text-muted"><?= h($session['role']) ?></div>
-                </div>
-            </div>
-            <p class="small mb-1"><?= h($session['when']) ?></p>
-            <p class="small text-muted mb-3"><?= h($session['mode']) ?></p>
-            <a href="#" class="btn btn-outline-secondary w-100 btn-sm"><?= __('View appointment') ?></a>
-        </section>
+        <?= $this->cell('NextSession') ?>
     </div>
 
     <div class="col-lg-8">

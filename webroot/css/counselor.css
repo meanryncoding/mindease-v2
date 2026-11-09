@@ -1,0 +1,58 @@
+/* ===== Counselor pages (loaded only by the counselor layout) ===== */
+.stat-link { color: var(--me-ink); }
+.stat-link:hover { border-color: var(--me-lavender-strong); background: var(--me-hover); color: var(--me-ink); }
+
+.session-row.is-selected,
+.appt-row.is-selected { background: var(--me-lavender); border-color: var(--me-lavender-strong); }
+
+.day-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: .5rem; }
+.day-card {
+    display: flex; flex-direction: column; align-items: center; gap: .1rem; padding: .6rem .25rem;
+    border: 1px solid var(--me-border); border-radius: .8rem; background: var(--me-surface);
+    color: var(--me-ink); text-decoration: none;
+}
+.day-card:hover { border-color: var(--me-lavender-strong); background: var(--me-hover); color: var(--me-ink); }
+.day-card.is-selected { background: var(--me-brand-2); border-color: var(--me-brand-2); color: #fff; }
+.day-card.is-today:not(.is-selected) { border-color: var(--me-lavender-strong); }
+.day-name { font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; opacity: .8; }
+.day-num { font-size: 1.15rem; font-weight: 600; line-height: 1.2; }
+.day-count { font-size: .72rem; opacity: .85; }
+.day-dot { font-size: .45rem; vertical-align: middle; color: #d9822b; }
+.day-card.is-selected .day-dot { color: #fff; }
+
+.appt-row {
+    display: flex; align-items: center; gap: .9rem; padding: .75rem 1rem;
+    border: 1px solid var(--me-border); border-radius: .8rem; background: var(--me-surface);
+    color: var(--me-ink); text-decoration: none;
+}
+.appt-row:hover { border-color: var(--me-lavender-strong); background: var(--me-hover); color: var(--me-ink); }
+.appt-row.is-cancelled .appt-time,
+.appt-row.is-cancelled strong { text-decoration: line-through; }
+.appt-row.is-cancelled { opacity: .7; }
+.appt-time { min-width: 4.6rem; font-weight: 600; font-size: .85rem; }
+
+.action-details { border-top: 1px solid var(--me-border); padding-top: .75rem; }
+.action-details summary { cursor: pointer; font-size: .85rem; font-weight: 500; color: var(--me-muted); }
+.action-details summary:focus-visible { outline: 3px solid #7c5cbf; outline-offset: 2px; }
+
+@media (max-width: 575px) {
+    .day-card { padding: .5rem .1rem; }
+    .appt-row { flex-wrap: wrap; }
+}
+
+/* Waiting time and session countdown on requests */
+.aging {
+    display: inline-flex; align-items: center; gap: .3rem; padding: .1rem .55rem;
+    border-radius: 999px; font-size: .75rem; font-weight: 500;
+    background: var(--me-lavender); color: var(--me-ink);
+}
+.aging-warn { background: #fff1c2; color: #5c4300; }
+.aging-late { background: #fbd5d5; color: #6b1414; }
+.aging-urgent { background: #7a1f1f; color: #fff; }
+[data-bs-theme="dark"] .aging-warn { background: #4a3a0b; color: #ffe9a3; }
+[data-bs-theme="dark"] .aging-late { background: #5a1f1f; color: #ffd6d6; }
+[data-bs-theme="dark"] .aging-urgent { background: #b53a3a; color: #fff; }
+
+/* Count that means "something is waiting for you" (only used when the count is above zero) */
+.chip-alert { background: #b3261e; color: #fff; font-weight: 700; }
+[data-bs-theme="dark"] .chip-alert { background: #c0362c; color: #fff; }
